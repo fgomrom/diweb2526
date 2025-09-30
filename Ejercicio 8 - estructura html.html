@@ -1,0 +1,182 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MiTiendaOnline - Maqueta (HTML5)</title>
+</head>
+<body>
+  <!-- ------------------------- -->
+  <!-- HEADER: Identificación + Navbar -->
+  <!-- ------------------------- -->
+  <header>
+    <!-- Identificación: logo + nombre -->
+    <div id="identificacion" aria-label="Identificación del sitio">
+      <!-- Logotipo (imagen de ejemplo) -->
+      <a href="index.html" title="Ir a la página principal">
+        <img src="https://placehold.co/120x60?text=Logo" alt="Logotipo de MiTiendaOnline">
+      </a>
+      <h1>MiTiendaOnline</h1>
+    </div>
+
+    <!-- Imagen de cabecera / banner -->
+    <figure>
+      <img src="https://placehold.co/1200x200?text=Banner+Cabecera" alt="Imagen de cabecera de la tienda">
+      <figcaption>Promociones de temporada</figcaption>
+    </figure>
+
+    <!-- Barra de navegación (navbar) con menú principal y elementos interactivos -->
+    <nav class="navbar" aria-label="Navegación principal">
+      <!-- Menú principal (en la parte superior) -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="ofertas.html">Ofertas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+      </ul>
+
+      <!-- Interacción: buscador -->
+      <form action="#" method="get" role="search" aria-label="Formulario de búsqueda">
+        <label for="q" class="visually-hidden">Buscar productos</label>
+        <input id="q" name="q" type="search" placeholder="Buscar...">
+        <button type="submit">Buscar</button>
+      </form>
+
+      <!-- Interacción: selector de idioma -->
+      <form action="#" method="get" aria-label="Selector de idioma">
+        <label for="lang" class="visually-hidden">Idioma</label>
+        <select id="lang" name="lang">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </form>
+
+      <!-- Icono de carrito (enlace) -->
+      <a href="carrito.html" aria-label="Ver carrito de compra">🛒 Carrito (0)</a>
+    </nav>
+  </header>
+
+  <!-- ------------------------- -->
+  <!-- BREADCRUMB (Migas de pan) -->
+  <!-- ------------------------- -->
+  <nav aria-label="Migas de pan">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li>Productos</li>
+      <li>Electrónica</li>
+    </ol>
+  </nav>
+
+  <!-- ------------------------- -->
+  <!-- MAIN: cuerpo + sidebar -->
+  <!-- ------------------------- -->
+  <main>
+    <!-- Aside de navegación / barra lateral -->
+    <aside aria-label="Barra lateral con categorías y widgets">
+      <h2>Categorías</h2>
+      <ul>
+        <li><a href="#">Electrónica</a></li>
+        <li><a href="#">Ropa</a></li>
+        <li><a href="#">Hogar</a></li>
+        <li><a href="#">Ofertas</a></li>
+      </ul>
+
+      <!-- Widget: formulario newsletter -->
+      <section aria-label="Suscripción al boletín">
+        <h3>Suscríbete al boletín</h3>
+        <form action="#" method="post">
+          <label for="email">Correo electrónico:</label>
+          <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+          <button type="submit">Suscribirse</button>
+        </form>
+      </section>
+
+      <!-- Widget: enlaces a redes sociales -->
+      <section aria-label="Redes sociales">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Twitter">Twitter</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Sección principal de contenidos -->
+    <section aria-label="Contenido principal">
+      <!-- Texto de presentación -->
+      <header>
+        <h2>Bienvenido a MiTiendaOnline</h2>
+        <p>Encuentra los mejores productos con ofertas exclusivas. Calidad y envío rápido.</p>
+      </header>
+
+      <!-- Productos destacados -->
+      <section aria-label="Productos destacados">
+        <h3>Productos destacados</h3>
+        <!-- Cada producto es un article semántico -->
+        <article>
+          <img src="https://placehold.co/300x200?text=Producto+1" alt="Producto 1">
+          <h4>Nombre Producto 1</h4>
+          <p>Descripción corta del producto 1.</p>
+          <p>Precio: 19,99 €</p>
+          <a href="producto1.html">Ver producto</a>
+        </article>
+
+        <article>
+          <img src="https://placehold.co/300x200?text=Producto+2" alt="Producto 2">
+          <h4>Nombre Producto 2</h4>
+          <p>Descripción corta del producto 2.</p>
+          <p>Precio: 29,99 €</p>
+          <a href="producto2.html">Ver producto</a>
+        </article>
+
+        <article>
+          <img src="https://placehold.co/300x200?text=Producto+3" alt="Producto 3">
+          <h4>Nombre Producto 3</h4>
+          <p>Descripción corta del producto 3.</p>
+          <p>Precio: 39,99 €</p>
+          <a href="producto3.html">Ver producto</a>
+        </article>
+      </section>
+
+      <!-- Enlaces rápidos / Widgets dentro del contenido -->
+      <section aria-label="Widgets de atención al cliente">
+        <h3>Atención al cliente</h3>
+        <ul>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Tiempos de envío</a></li>
+          <li><a href="#">Devoluciones</a></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <!-- ------------------------- -->
+  <!-- FOOTER: información básica + menú secundario -->
+  <!-- ------------------------- -->
+  <footer>
+    <section aria-label="Información de contacto">
+      <h4>Contacto</h4>
+      <p>Correo: info@mitiendasonline.example</p>
+      <p>Teléfono: 900 123 456</p>
+    </section>
+
+    <nav aria-label="Menú de pie de página">
+      <ul>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Aviso legal</a></li>
+      </ul>
+    </nav>
+
+    <p>© 2025 MiTiendaOnline</p>
+  </footer>
+
+  <!-- Nota: este archivo usa sólo HTML5 semántico. Para una maqueta visual se puede añadir CSS. -->
+</body>
+</html>
+Ejercicio8_maqueta_tienda_online.html
+Mostrando Ejercicio8_maqueta_tienda_online.html.
