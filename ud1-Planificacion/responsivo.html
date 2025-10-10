@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Responsivo Fluido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    nav ul li {
+      padding: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap; /* Flexbox para un flujo natural */
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    article {
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin: 10px;
+      flex: 1 1 25%; /* Se ajusta al 25% del ancho, pero es flexible */
+      box-sizing: border-box;
+    }
+    
+    /* Aseguramos que el diseño fluya sin importar el tamaño */
+    article img {
+      max-width: 100%; /* Las imágenes también se adaptan */
+      height: auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Diseño Responsivo Fluido</h1>
+    <p>Este diseño se adapta a cualquier resolución de pantalla sin puntos de corte.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Artículo 1</h2>
+      <p>Este artículo se adapta automáticamente a cualquier tamaño de pantalla.</p>
+    </article>
+
+    <article>
+      <h2>Artículo 2</h2>
+      <p>El diseño es completamente flexible sin media queries.</p>
+    </article>
+
+    <article>
+      <h2>Artículo 3</h2>
+      <p>Usa `flexbox` para distribuir los elementos de forma fluida.</p>
+    </article>
+
+    <article>
+      <h2>Artículo 4</h2>
+      <p>Imágenes y textos se ajustan automáticamente.</p>
+      <img src="https://via.placeholder.com/300" alt="Ejemplo imagen">
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2024 - Ejemplo de diseño responsivo fluido</p>
+  </footer>
+
+</body>
+</html>

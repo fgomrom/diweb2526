@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Adaptativo</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Estilos para móviles (hasta 480px) */
+    @media only screen and (max-width: 480px) {
+      .container {
+        width: 100%;
+        padding: 10px;
+      }
+      h1 {
+        font-size: 18px;
+      }
+    }
+
+    /* Estilos para tabletas (768px a 1024px) */
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .container {
+        width: 80%;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    /* Estilos para escritorio (más de 1024px) */
+    @media only screen and (min-width: 1025px) {
+      .container {
+        width: 60%;
+      }
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Diseño Adaptativo</h1>
+    <p>Este es un ejemplo de cómo se adapta el contenido a diferentes resoluciones de pantalla usando media queries.</p>
+  </div>
+
+</body>
+</html>
