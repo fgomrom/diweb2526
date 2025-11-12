@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Unidades CSS (vh, vw, %)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .box {
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid #333;
+            box-sizing: border-box;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        /* 1. Completar con: ancho de 50vw y alto de 30vh */
+.vh-box {
+    background-color: #2a9d8f;
+    width: 50vw; /* 50% del Ancho del Viewport */
+    height: 30vh; /* 30% del Alto del Viewport */
+}
+
+/* 2. Completar con: ancho de 80% y alto de 200px */
+.vw-box {
+    background-color: #e9c46a;
+    width: 80%; /* 80% del Ancho del Elemento Contenedor (Body) */
+    height: 200px; /* Alto fijo de 200 píxeles */
+}
+
+/* 3. Completar con: ancho de 60%, alto mínimo de 200px y ancho máximo de 500px */
+.percent-box {
+    background-color: #f4a261;
+    width: 60%; /* 60% del Ancho del Elemento Contenedor (Body) */
+    min-height: 200px; /* Alto Mínimo fijo de 200 píxeles */
+    max-width: 500px; /* Ancho Máximo fijo de 500 píxeles */
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>Unidades de Medida en CSS</h1>
+
+    <div class="box vh-box">
+        .vh-box (vw y vh)
+        <br>
+        Depende del tamaño de la ventana (Viewport).
+    </div>
+
+    <div class="box vw-box">
+        .vw-box (% y px)
+        <br>
+        Ancho depende del contenedor (Body), Alto es fijo.
+    </div>
+
+    <div class="box percent-box">
+        .percent-box (%, min-height y max-width)
+        <br>
+        Ancho depende del contenedor (Body). Max-width lo limita.
+    </div>
+
+</body>
+</html>
