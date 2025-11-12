@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Background-Attachment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos base para la página */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+
+        /* Estilo común para todas las secciones de contenido */
+        .content-section {
+            padding: 80px 5%;
+            min-height: 80vh; /* Asegura que cada sección sea alta para forzar el scroll */
+            color: #1f2937;
+            font-size: 1.125rem; /* text-lg */
+            border-bottom: 2px solid #cbd5e1;
+        }
+
+        /* 1. SECCIÓN CON FONDO DINÁMICO (Background-Attachment: scroll) */
+        .scroll-bg {
+            background-image: url('https://placehold.co/1200x800/2a9d8f/ffffff?text=SCROLL');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll; /* El fondo se desplaza con el contenido */
+            color: white;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        /* 2. SECCIÓN CON FONDO FIJO (Background-Attachment: fixed) */
+        .fixed-bg {
+            background-image: url('https://placehold.co/1200x800/e9c46a/333333?text=FIXED');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* El fondo permanece fijo en la ventana (viewport) */
+            color: #1f2937;
+            text-shadow: 1px 1px 2px #fff;
+        }
+        
+        /* 3. SECCIÓN CON FONDO LOCAL (Background-Attachment: local) */
+        /* Nota: Para ver 'local' se necesita que el scroll esté dentro del div, no en el body. */
+        .local-bg {
+            background-image: url('https://placehold.co/1200x800/f4a261/ffffff?text=LOCAL');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: local; /* El fondo se desplaza con el contenido del DIV interno */
+            color: white;
+            text-shadow: 1px 1px 2px #000;
+            
+            /* Contenedor que tiene su propio scroll para demostrar 'local' */
+            max-height: 80vh;
+            overflow-y: scroll; 
+        }
+
+        .local-bg-content {
+            padding: 50px;
+            height: 150vh; /* Contenido interno alto para generar scroll dentro del DIV */
+        }
+/*
+SCROLL: La imagen de fondo se mueve fuera de la ventana con el resto del contenido.
+
+FIXED: La imagen de fondo permanece estática en la ventana mientras el contenido pasa por encima de ella.
+
+LOCAL: El desplazamiento principal del cuerpo (body) no mueve el fondo. Debes usar la barra de desplazamiento interna de esa sección naranja para ver cómo el fondo se mueve con el contenido interno de ese div.
+*/
+    </style>
+</head>
+<body>
+
+    <header class="bg-indigo-600 text-white p-6 shadow-md text-center sticky top-0 z-10">
+        <h1 class="text-3xl font-bold">Background-Attachment en CSS</h1>
+        <p class="text-sm italic">Desplázate para ver las diferencias.</p>
+    </header>
+
+    <!-- ****************************************************** -->
+    <!-- SECCIÓN 1: background-attachment: scroll (Comportamiento por defecto) -->
+    <!-- ****************************************************** -->
+    <section class="content-section scroll-bg">
+        <h2 class="text-4xl font-extrabold mb-6">1. Attachment: SCROLL</h2>
+        <p class="mb-4">
+            **Comportamiento:** Este es el comportamiento por defecto y más común. La imagen de fondo se mueve **junto con el contenido de la página** cuando desplazas el *viewport*. El fondo está "pegado" al elemento.
+        </p>
+        <p class="mb-4">
+            A medida que te desplazas hacia abajo por esta sección, notarás que la imagen (la palabra 'SCROLL') desaparece gradualmente por la parte superior de la ventana del navegador. Su posición es relativa al elemento `&lt;section&gt;` que la contiene.
+        </p>
+        <div class="h-96 w-full"></div>
+        <p>
+            Continúa desplazándote para pasar a la siguiente sección y observa cómo el fondo se mueve completamente fuera de la vista.
+        </p>
+    </section>
+
+    <!-- ****************************************************** -->
+    <!-- SECCIÓN 2: background-attachment: fixed -->
+    <!-- ****************************************************** -->
+    <section class="content-section fixed-bg">
+        <h2 class="text-4xl font-extrabold mb-6">2. Attachment: FIXED</h2>
+        <p class="mb-4">
+            **Comportamiento:** La imagen de fondo se mantiene **fija en el *viewport***. Cuando desplazas la página, el contenido se mueve por encima de la imagen de fondo, creando un efecto de *parallax*.
+        </p>
+        <p class="mb-4">
+            Observa la imagen de fondo ('FIXED') mientras te desplazas por la página. Aunque el contenido (incluyendo este texto) se mueve, la imagen de fondo permanece en la misma posición relativa a la ventana de tu navegador. Esto es muy común en los efectos visuales de sitios web modernos.
+        </p>
+        <div class="h-96 w-full"></div>
+        <p>
+            Una vez que esta sección desaparezca de la vista, la imagen de fondo fijo también desaparecerá, ya que solo se aplica dentro de los límites de esta sección.
+        </p>
+    </section>
+
+    <!-- ****************************************************** -->
+    <!-- SECCIÓN 3: background-attachment: local -->
+    <!-- ****************************************************** -->
+    <section class="content-section bg-gray-200">
+        <h2 class="text-4xl font-extrabold mb-6">3. Attachment: LOCAL</h2>
+        <p class="mb-4">
+            **Comportamiento:** El fondo se desplaza junto con el contenido, **pero solo si el desplazamiento ocurre dentro del propio elemento**, no en la página principal (`body`).
+        </p>
+        <p class="mb-4">
+            Esta caja a continuación tiene su propio scrollbar. Observa la imagen de fondo ('LOCAL') mientras desplazas *dentro de esta caja* y verás que el fondo se mueve con el texto.
+        </p>
+        
+        <div class="local-bg border-4 border-orange-500 rounded-lg shadow-xl mt-8">
+            <div class="local-bg-content">
+                <h3 class="text-3xl font-bold mb-4">Contenido con Scroll Local</h3>
+                <p>
+                    Cuando haces *scroll* dentro de este `div` (usando su propia barra lateral), la imagen de fondo ('LOCAL') se mueve con el texto. Esto es lo que distingue a `local` de `scroll`. Si hubiéramos usado `scroll` aquí, el fondo solo se movería cuando se desplazara el `body`, no el `div`.
+                </p>
+                <div class="h-96 w-full"></div>
+                <p class="mt-4">
+                    Más contenido para forzar el desplazamiento interno. Si no puedes ver una barra de desplazamiento aquí, reduce la altura de tu ventana del navegador.
+                </p>
+                <div class="h-96 w-full"></div>
+                <p>
+                    El fondo local se mueve con el desplazamiento del contenido del elemento contenedor.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-indigo-600 text-white p-4 text-center">
+        <p>Fin del ejercicio. Intenta cambiar los valores en el CSS.</p>
+    </footer>
+
+</body>
+</html>
+
