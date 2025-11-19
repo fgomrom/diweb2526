@@ -1,0 +1,20 @@
+/* 1. Lista ordenada de tareas */
+ol.tareas {
+    list-style-type: decimal-leading-zero; /* Usa números con ceros iniciales */
+    list-style-position: inside; /* Coloca las marcas de lista dentro del texto */
+    color: #003366; /* Cambia el color del texto a azul oscuro */
+}
+
+/* 2. Lista no ordenada de materiales */
+ul.materiales {
+    list-style-type: square; /* Usa cuadrados como marcas de lista */
+    list-style-position: outside; /* Coloca las marcas de lista fuera del texto */
+    color: #2a7a1f; /* Cambia el color del texto a verde oscuro */
+}
+
+/* 3. Lista personalizada de recursos de estudio */
+ul.recursos {
+    list-style-image: url('https://cdn-icons-png.flaticon.com/256/2232/2232688.png'); /* Usa una imagen personalizada como marca de lista */
+    list-style-position: inside; /* Coloca las marcas de lista dentro del texto */
+    color: #444444; /* Cambia el color del texto a gris oscuro */
+}
