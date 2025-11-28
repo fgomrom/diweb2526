@@ -1,0 +1,48 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Primera sección: Borde punteado */
+.seccion1 {
+    border: 3px dotted blue;
+    margin: 20px;
+    padding: 10px;
+    background-color: #e3f2fd; /* Azul claro */
+}
+
+/* Segunda sección: Borde sólido con diferentes grosores */
+.seccion2 {
+    border-style: solid;
+    border-width: 5px 10px 15px 20px; /* Arriba, derecha, abajo, izquierda */
+    border-color: green;
+    margin: 20px;
+    padding: 10px;
+    background-color: #e8f5e9; /* Verde claro */
+}
+
+/* Tercera sección: Botón con borde doble y redondeado */
+.seccion3 {
+    display: flex;
+    justify-content: center; /* Centrar el botón */
+    margin: 20px;
+    padding: 10px;
+    background-color: #ffebee; /* Rojo claro */
+}
+
+.seccion3 button {
+    border: 4px double red;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: border 0.3s, color 0.3s; /* Suavizar la animación */
+}
+
+.seccion3 button:hover {
+    border: 6px double orange;
+    color: orange;
+}

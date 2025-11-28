@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="midiv">Holasdf a!</div>
+    <button onclick="alternar()">Haz clic aquí</button>
+    <button onclick="alternar2()">Haz clic aquí</button>
+    <script>
+        function alternar() {
+            var elemento = document.getElementById("midiv");
+            if (elemento.style.display === "none") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+        function alternar2() {
+            var elemento = document.getElementById("midiv");
+            if (elemento.style.visibility === "hidden") {
+                elemento.style.visibility = "visible";
+            } else {
+                elemento.style.visibility = "hidden";
+            }
+        }
+    </script>
+</body>
+</html>

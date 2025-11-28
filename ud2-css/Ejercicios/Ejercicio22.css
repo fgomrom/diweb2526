@@ -1,0 +1,50 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+/* Contenedor general */
+.contenedor {
+    margin: 30px;   
+    background-color: #e0f7fa; /* Azul claro */
+    padding: 20px;
+    border: 1px solid #b2ebf2;
+}
+
+/* Primera sección: Márgenes simples */
+.seccion1 {
+    margin: 20px;
+    background-color: #ffe0b2; /* Naranja claro */
+    padding: 10px;
+    border: 1px solid #ffcc80;
+}
+
+/* Segunda sección: Márgenes asimétricos */
+.seccion2 {
+    margin: 10px 20px 30px 40px; /* Arriba, derecha, abajo, izquierda */
+    background-color: #c8e6c9; /* Verde claro */
+    padding: 10px;
+    border: 1px solid #a5d6a7;
+}
+
+/* Tercera sección: Márgenes automáticos */
+.seccion3 {
+    
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    padding: 10px;
+    background-color: #ffebee; /* Rojo claro */
+}
+
+.seccion3 button {
+    margin: auto; /* Márgenes automáticos */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #f48fb1; /* Rosa */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
