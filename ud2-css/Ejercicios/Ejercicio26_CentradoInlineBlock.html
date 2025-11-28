@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrado: Inline-Block Esencial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        .ejercicio-titulo {
+            text-align: center;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 40px 0 20px 0;
+        }
+
+        .contenedor-chips {
+            /* 1. La misma técnica: text-align: center en el padre */
+            text-align: center;
+            padding: 20px;
+            background-color: #f0fdf4; /* Verde muy claro */
+            border: 1px solid #d1fae5;
+            border-radius: 8px;
+        }
+
+        .chip {
+            /* 2. El truco: display: inline-block en los hijos */
+            display: inline-block;
+            
+            /* 3. Estilos de los chips */
+            background-color: #34d399; /* Verde más intenso */
+            color: white;
+            padding: 8px 15px;
+            margin: 5px; /* Margen para separarlos */
+            border-radius: 9999px; /* Totalmente redondeado */
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <h2 class="ejercicio-titulo">Ejercicio Práctico: Centrar una Fila de Chips</h2>
+
+    <div class="p-4 mx-auto max-w-4xl">
+        <p class="text-gray-700 mb-4">
+            A continuación, tenemos una serie de elementos "Chip" que deberían estar centrados horizontalmente, incluso cuando el ancho de la pantalla obliga a que salten de línea. 
+            <br>¡Observa el comportamiento de `inline-block` y ajusta la ventana para ver cómo se centra cada fila!
+        </p>
+
+        <div class="contenedor-chips">
+            <p class="text-sm text-gray-700 mb-4">El contenedor padre usa <code>text-align: center;</code></p>
+            
+            <!-- Tarea: Estos chips ya tienen display: inline-block; aplicado en CSS. -->
+            <div class="chip">CSS Básico</div>
+            <div class="chip">HTML5</div>
+            <div class="chip">Modelo de Cajas</div>
+            <div class="chip">Flexbox</div>
+            <div class="chip">Grid CSS</div>
+            <div class="chip">JavaScript ES6</div>
+            <div class="chip">ReactJS</div>
+            <div class="chip">Tailwind CSS</div>
+            <div class="chip">SASS</div>
+            <div class="chip">Accesibilidad</div>
+        </div>
+
+        <div class="mt-8 p-4 bg-white border border-gray-200 rounded-lg">
+            <h3 class="text-lg font-semibold text-gray-800">Tarea:</h3>
+            <p class="text-gray-700 mt-2">
+                1. Inspecciona el código CSS del **`.contenedor-chips`** (el padre).
+            </p>
+            <p class="text-gray-700 mt-2">
+                2. Inspecciona el código CSS del **`.chip`** (los hijos).
+            </p>
+            <p class="text-gray-700 mt-2">
+                3. **Pregunta de Auto-Evaluación:** Si cambiaras el `display` del `.chip` a `block`, ¿qué ocurriría? ¿Y si lo cambiaras a `inline`?
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrado: Inline-Block Esencial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .contenedor-padre {
+            /* PASO 1: Alinear el contenido "inline" del padre */
+            text-align: center; 
+            padding: 40px;
+            background-color: #eef2ff; /* Fondo para ver los límites */
+            font-family: 'Inter', sans-serif;
+            min-height: 200px;
+        }
+
+        .bloque-a-centrar {
+            /* PASO 2: Convertir el bloque en un elemento que 'text-align' pueda centrar */
+            display: inline-block; 
+            
+            /* PASO 3: Darle un ancho limitado para que se note el centrado */
+            width: 70%;
+            max-width: 500px;
+            
+            /* Estilos visuales */
+            background-color: #ffffff;
+            padding: 30px;
+            border: 2px solid #6366f1; /* Borde de color para destacar */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Importante: Devolver la alineación del texto interno a la normalidad */
+            text-align: left; 
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #4f46e5;
+        }
+        p {
+            color: #374151;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <div class="contenedor-padre">
+        <p class="text-sm text-gray-600 mb-4">El **Contenedor Padre** tiene `text-align: center;`</p>
+        
+        <div class="bloque-a-centrar">
+            <h1>Bloque Centrado</h1>
+            <p>Este bloque tiene `display: inline-block;` y un ancho menor al 100%, permitiendo que el contenedor padre lo centre horizontalmente.</p>
+        </div>
+    </div>
+
+</body>
+</html>
