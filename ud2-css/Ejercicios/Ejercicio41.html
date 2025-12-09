@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .icon {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-size: cover; /* Tamaño total del sprite */
+    background-image: url('sprite.jpg'); /* Enlace al sprite */
+    /*background-size: cover; /* Asegura que todo el sprite se ajuste */
+    text-indent: -9999px; /* Oculta el texto */
+}
+
+.icon.home {
+    background-position: 220px 2400px; /* Posición del icono "Inicio" */
+}
+
+.icon.search {
+    background-position: 44px 0; /* Posición del icono "Buscar" */
+}
+
+.icon.settings {
+    background-position: 90px 0; /* Posición del icono "Configuración" */
+}
+
+/* Opcional: Cambiar el estado al pasar el ratón */
+.icon:hover {
+    filter: brightness(1.2); /* Hace que el icono se ilumine */
+}
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="#" class="icon home">Inicio</a>
+        <a href="#" class="icon search">Buscar</a>
+        <a href="#" class="icon settings">Configuración</a>
+    </div>
+</body>
+</html>
