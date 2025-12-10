@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 42</title>
+    <style>
+        /* ============================================== */
+        /* ESTILOS GLOBALES (Se aplican a TODOS los dispositivos, incluyendo print, screen, etc.) */
+        /* ============================================== */
+
+        /* 1. Párrafos (Párrafos deben tener una fuente en itálica, negrita y un tamaño de 18 px en cualquier dispositivo.) */
+        p {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* 2. Alineación General para Párrafos e Imágenes (Ambos deben estar alineados a la izquierda en todos los dispositivos) */
+        /* Usamos text-align: left en el body para elementos en línea como <img>, y en el p para el texto. */
+        body {
+            text-align: left;
+            /* Alinea elementos en línea (imágenes) a la izquierda por defecto */
+        }
+
+        p {
+            text-align: left;
+            /* Asegura que el texto del párrafo esté a la izquierda */
+        }
+
+
+        /* 3. Enlaces (Los enlaces siempre tienen que aparecer centrados) */
+        .enlaces-contenedor {
+            text-align: center;
+            /* Centra los elementos en línea (<a>) */
+            margin-top: 30px;
+        }
+
+        .enlaces-contenedor a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+
+        /* ============================================== */
+        /* ESTILOS CONDICIONALES (@media screen) */
+        /* ============================================== */
+
+        /* @media screen: Estos estilos solo se aplican cuando se visualiza en una pantalla (monitor, móvil, tablet) */
+        @media screen {
+
+            /* Imágenes (Las imágenes deben aparecer centradas sólo cuando se visualicen en una pantalla.) */
+            /* Para centrar elementos de bloque (o en línea como <img>) se centra el contenedor padre. */
+            body {
+                /* Sobrescribe la alineación a la izquierda definida globalmente */
+                text-align: center;
+            }
+
+            /* Párrafos y elementos en línea (como enlaces dentro del contenedor)
+       deben volver a alinearse a la izquierda si el body está centrado,
+       ya que la regla dice: "excepto cuando la imagen se muestre en una pantalla" */
+            p {
+                text-align: left;
+                /* Mantiene la alineación a la izquierda para los párrafos */
+            }
+        }
+
+        /* Nota importante:
+   En @media screen, se cumple:
+   - Párrafos: Negrita, Itálica, 18px (Global) Y alineados a la izquierda (Bloque @media screen)
+   - Imágenes: Centradas (Bloque @media screen)
+   - Enlaces: Centrados (Global)
+   
+   Fuera de @media screen (e.g., Print, o un dispositivo desconocido), se cumple:
+   - Párrafos: Negrita, Itálica, 18px (Global) Y alineados a la izquierda (Global)
+   - Imágenes: Alineadas a la izquierda (Global)
+   - Enlaces: Centrados (Global)
+*/
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio de Estilos Condicionales</h1>
+
+    <p class="contenido">Este es el primer párrafo. Debe tener fuente en itálica, negrita y 18px en todos los
+        dispositivos.</p>
+    <p class="contenido">Este es el segundo párrafo. El texto siempre debe estar alineado a la izquierda.</p>
+    <p class="contenido">Este es el tercer párrafo. La clave está en cómo aplicar la alineación en diferentes medios.
+    </p>
+
+    <img src="img/imagen1.jpg" alt="Descripción de la imagen 1" class="contenido imagen">
+    <img src="img/imagen2.jpg" alt="Descripción de la imagen 2" class="contenido imagen">
+    <img src="img/imagen3.jpg" alt="Descripción de la imagen 3" class="contenido imagen">
+
+    <div class="enlaces-contenedor">
+        <a href="#">Primer Enlace (Siempre Centrado)</a>
+        <a href="#">Segundo Enlace (Siempre Centrado)</a>
+    </div>
+</body>
+
+</html>
