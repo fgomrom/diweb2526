@@ -1,0 +1,27 @@
+@mixin ejercicio3 ($border){
+    border:$border
+}
+
+div {
+    @include ejercicio3 (1px red solid);
+}
+
+@while $i <= $num {
+    .caja-#{$i}  {
+        width: 100px * i;
+    }
+    $i : $i + 1;
+}
+
+@for $i from 1 through $num {
+    .caja-#{$i}  {
+        width: 100px * i;
+    }
+}
+
+$elementos: 1 100, 2 200, 3 300;
+@each $e in $elementos {
+    .caja-#{nth($elementos, 1)}  {
+        width: nth($elementos, 2);
+    }
+}
