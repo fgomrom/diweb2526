@@ -1,0 +1,23 @@
+/* =========================
+   Variables
+   ========================= */
+$color-principal: #3498db;
+$color-secundario: #2ecc71;
+$color-texto: #3333;
+$fuente-principal: Arial, sans-serif;
+$padding-base: 10px;
+
+/* =========================
+   Estilos
+   ========================= */
+body {
+  font-family: $fuente-principal;
+  color: $color-texto;
+  margin: 0;
+}
+
+.header {
+  background-color: $color-principal;
+  color: white;
+  padding: $padding-base;
+}
