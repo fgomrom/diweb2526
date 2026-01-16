@@ -1,0 +1,14 @@
+$colores: (
+  primario: #3498db,
+  secundario: #2ecc71,
+  alerta: #e74c3c
+);
+
+$tipos-fuente: ("Arial", "Verdana", "Helvetica");
+
+.titulo::before {
+  color: map-get($colores, primario);
+  font-family: nth($tipos-fuente, 1);
+  font-size: 2em;
+  content: unquote(to-upper-case("Mi título"));
+}
