@@ -1,0 +1,19 @@
+/* Contenedor principal */
+.contenedor {
+    display: flex;               /* Activa Flexbox */
+    justify-content: center;     /* Centrado horizontal (eje principal) */
+    align-items: center;         /* Centrado vertical (eje secundario) */
+
+    height: 100vh;               /* Ocupa toda la altura de la pantalla (la anchura ya la ocupa por ser un elemento de bloque */
+    border: 2px solid #000;
+}
+
+/* Elemento a centrar */
+.caja {
+    width: 200px;
+    height: 100px;
+    background-color: #ddd;
+
+    text-align: center;
+    line-height: 100px;
+}
