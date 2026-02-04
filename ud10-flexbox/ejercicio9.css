@@ -1,0 +1,58 @@
+/* ===== GRID: estructura general ===== 
+Grid se usa para dividir la página en bloques principales. No alinea elementos, solo define estructura. */
+.layout {
+  display: grid;
+
+  /* Tres filas: header, contenido, footer */
+  grid-template-rows: auto 1fr auto;
+
+  /* La página ocupa toda la pantalla */
+  min-height: 100vh;
+}
+
+/* ===== FLEXBOX: header ===== 
+Flexbox es ideal para alinear elementos en una sola dirección (fila).*/
+header {
+  display: flex;
+
+  /* Logo a la izquierda, menú a la derecha */
+  justify-content: space-between;
+
+  /* Alineación vertical */
+  align-items: center;
+
+  padding: 1rem;
+}
+/* Flexbox organiza los enlaces del menú sin usar márgenes manuales.*/
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ===== FLEXBOX: contenido principal ===== 
+Flexbox permite distribuir las cards de forma flexible y centrada.*/
+.cards {
+  display: flex;
+
+  /* Centrado horizontal */
+  justify-content: center;
+
+  /* Espacio entre cards */
+  gap: 1.5rem;
+
+  padding: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  background-color: #e0e0e0;
+}
+
+/* ===== FLEXBOX: footer ===== 
+Mismo patrón que el header: distribución horizontal sencilla.*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+

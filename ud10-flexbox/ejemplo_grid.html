@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="layout">
+  <div class="item">Logo (150px)</div>
+  <div class="item">Menu (auto)</div>
+  <div class="item">Espaciador (1fr)</div>
+  <div class="item">Buscador (2fr)</div>
+</div>
+
+</body>
+<style>
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 150px auto  2fr;
+    background-color: #f0f0f0;
+    padding: 10px;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .item {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+</style>
+</html>
