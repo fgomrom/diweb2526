@@ -1,0 +1,99 @@
+/* ================================
+   ESTILOS GENERALES Y HERENCIA
+   ================================ */
+
+/* Estas propiedades se heredan por la mayoría de los elementos de texto */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0; /* Eliminamos el margen por defecto del navegador */
+}
+
+/* ================================
+   CABECERA Y MENÚ
+   ================================ */
+
+.cabecera {
+    background-color: #f2f2f2;
+    padding: 20px; /* Espacio interno: modelo de caja */
+}
+
+/* Selector descendente: solo enlaces dentro de nav */
+nav a {
+    margin-right: 15px; /* Separación horizontal entre enlaces */
+    text-decoration: none;
+    color: #0066cc;
+}
+
+/* Pseudoclase :hover */
+nav a:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+   ================================ */
+
+.contenedor {
+    margin: 40px;
+    border: 2px dashed #ccc;
+
+    /* Punto clave para position */
+    position: relative;
+}
+
+/* ================================
+   CAJAS – MODELO DE CAJA
+   ================================ */
+
+.caja {
+    width: 150px;
+    height: 100px;
+
+    /* Modelo de caja */
+    padding: 10px;
+    border: 2px solid #000;
+    margin: 20px;
+
+    background-color: #e6e6e6;
+
+    /* Cambiar entre:
+       block | inline | inline-block
+       para observar diferencias */
+    display: inline-block;
+
+    /* Alineación del texto (horizontal) */
+    text-align: center;
+
+    /* Solo para mejorar la visualización */
+    line-height: 80px;
+}
+
+/* ================================
+   CAJA ESPECIAL – POSITION
+   ================================ */
+
+.especial {
+    background-color: #ffcccc;
+    color: #990000;
+
+    /* Sale del flujo normal */
+    position: absolute;
+
+    /* Se posiciona respecto al contenedor
+       porque este tiene position: relative */
+    top: 20px;
+    right: 20px;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
