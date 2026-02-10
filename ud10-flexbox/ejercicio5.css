@@ -1,0 +1,94 @@
+/* ================================
+   ESTILOS GENERALES
+   ================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+.header {
+    display: flex;                      /* Activamos Flexbox */
+    justify-content: space-between;    /* Logo a la izquierda, menú a la derecha */
+    align-items: center;               /* Centrado vertical */
+
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+/* El menú también es un contenedor flex */
+.menu {
+    display: flex;
+    gap: 20px;                         /* Separación uniforme entre enlaces */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* ================================
+   LAYOUT PRINCIPAL
+   ================================ */
+
+.main {
+    display: flex;                     /* Sidebar y contenido en fila */
+    min-height: 400px;
+}
+
+/* ================================
+   SIDEBAR
+   ================================ */
+
+.sidebar {
+    width: 200px;                      /* Ancho fijo */
+    padding: 20px;
+    background-color: #e6e6e6;
+}
+
+/* ================================
+   CONTENIDO
+   ================================ */
+
+.contenido {
+    flex-grow: 1;                      /* Ocupa el espacio restante */
+    padding: 20px;
+}
+
+/* ================================
+   CARDS
+   ================================ */
+
+.cards {
+    display: flex;
+    gap: 20px;                         /* Espacio uniforme entre cards */
+}
+
+/* Cada card es flexible */
+.card {
+    flex-grow: 1;                      /* Todas crecen por igual */
+    padding: 20px;
+    background-color: #ddd;
+    text-align: center;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+.footer {
+    display: flex;
+    justify-content: space-between;    /* Reparte el espacio horizontal */
+    align-items: center;               /* Centrado vertical */
+
+    padding: 20px;
+    background-color: #f2f2f2;
+}
