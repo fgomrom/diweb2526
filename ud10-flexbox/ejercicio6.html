@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">Header</header>
+        <aside class="sidebar">Sidebar</aside>
+        <main class="main">Main</main>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+<style>
+
+.layout > * {
+  border: 2px solid #333;
+}
+
+.layout {
+  display: grid;
+
+  /* Dos columnas:
+     - Sidebar fija
+     - Main flexible */
+  grid-template-columns: 250px 1fr;
+
+  /* Tres filas:
+     - Header
+     - Contenido
+     - Footer */
+  grid-template-rows: auto 1fr auto;
+
+  /* El layout ocupa toda la pantalla */
+  min-height: 100vh;
+
+  /* Separación uniforme entre áreas */
+  gap: 1rem;
+}
+
+.header {
+  grid-column: 1 / -1;
+}
+
+.sidebar {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.main {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.footer {
+  grid-column: 1 / -1;
+}
+
+
+</style>
+</html>
